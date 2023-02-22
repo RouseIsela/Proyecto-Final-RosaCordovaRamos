@@ -1,0 +1,23 @@
+{% extends "AppColegio/padre.html" %}
+
+{% load static %}
+
+
+{% block colegio %}
+<br><br>
+<center>
+<br>
+<h1>Registrate</h1>
+<br>
+</center>
+<center>
+<form action="" method="POST">{% csrf_token %}
+
+    {{form.as_p}}
+
+    <button type="submit">Registrate</button>
+    <button  style="background-color: orange;"><a href="{% url 'Login' %}" style="color:black">Volver al Login</a></button>
+
+</form>
+</center>
+{% endblock %}

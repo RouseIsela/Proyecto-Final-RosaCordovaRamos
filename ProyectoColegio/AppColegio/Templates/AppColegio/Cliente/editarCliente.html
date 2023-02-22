@@ -1,0 +1,28 @@
+{% extends 'AppColegio/padre.html' %}
+
+
+
+{%if miFormulario.errors %}
+
+<p style="color: red">Están mal los datos</p>
+
+{% endif %}
+
+{% block colegio %}
+<br><br>
+<center>
+<h1> Editar Clientes</h1>
+<br><br>
+<form action="" enctype="multipart/form-data"  method="POST"> {%csrf_token%}
+
+    <table>
+
+        {{miFormulario.as_table}}
+
+    </table>
+
+    <input type="submit", value="Enviar", style="color:red">
+
+</form>
+</center>
+{% endblock %}

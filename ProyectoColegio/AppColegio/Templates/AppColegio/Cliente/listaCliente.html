@@ -1,0 +1,92 @@
+{% extends 'AppColegio/padre.html' %}
+{% load static %}
+
+{% block head %}
+   <title>CodePen - Fixed table header</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+   <link rel="stylesheet" href="{% static 'AppColegio/csss/style.css' %}">
+{% endblock head %}
+
+{% block body %}
+    <h1>En esta sección puedes encontrar la lista de clientes</h1>
+
+{% endblock body %}
+
+{% block colegio %}
+<br><br>
+<button style="background-color:#FFC600">
+<a style="color: black;"  href="{% url 'AñadirClientes' %}">Añadir nuevo Cliente</a>
+</button>
+<!-- partial:index.partial.html -->
+<section> 
+  <!--for demo wrap-->
+  <h1>Lista de Clientes</h1>
+     {% if miFormulario.errors %}
+     <p style="color:red">Estan mal los datos, revisar</p>
+     {% endif %}
+    <form action="/AppColegio/busquedaClientes/" method="GET">
+        <input type="number" name="dni" id="dni">
+        <input type="submit" value="Buscar">
+    </form>
+    <br>
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th>dni</th>
+          <th>nombre</th>
+          <th>apellido</th>
+          <th>email</th>
+          <th>Editar</th>
+          <th>Eliminar</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+        {% for e in resultados %}
+        <tr>
+          <td>{{e.dni}}</td>
+          <td>{{e.nombre}}</td>
+          <td>{{e.apellido}}</td>
+          <td>{{e.email}}</td>
+          <td><button  style="background-color: orange;">
+            <a href="{% url 'EditarCliente' e.dni %}" style="color:black">EDITAR</a>
+          </button></td>
+          <td><button  style="background-color: orange;">
+            <a href="{% url 'EliminarCliente' e.dni %}" style="color:black">ELIMINAR</a>
+          </button></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+
+<!-- follow me template -->
+<!-- partial -->
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="{% static 'AppColegio/js/script.js' %}"></script>
+
+</body>
+</html>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+ <script src="{% static 'AppColegio/lib/easing/easing.min.js' %}"></script>
+ <script src="{% static 'AppColegio/lib/waypoints/waypoints.min.js' %}"></script>
+ <script src="{% static 'AppColegio/lib/counterup/counterup.min.js' %}"></script>
+ <script src="{% static 'AppColegio/lib/owlcarousel/owl.carousel.min.js' %}"></script>
+ <script src="{% static 'AppColegio/lib/isotope/isotope.pkgd.min.js' %}"></script>
+ <script src="{% static 'AppColegio/lib/lightbox/js/lightbox.min.js' %}"></script>
+
+ <!-- Contact Javascript File -->
+ <script src="{% static 'AppColegio/mail/jqBootstrapValidation.min.js' %}"></script>
+ <script src="{% static 'AppColegio/mail/contact.js' %}"></script>
+
+ <!-- Template Javascript -->
+ <script src="{% static 'AppColegio/js/main.js' %}"></script>
+
+
+{% endblock %}

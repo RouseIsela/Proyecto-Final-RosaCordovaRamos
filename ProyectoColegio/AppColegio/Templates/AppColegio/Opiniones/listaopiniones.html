@@ -1,0 +1,71 @@
+{% extends 'AppColegio/padre.html' %}
+{% block head %}
+  {% load static %} 
+  <title>Comentarios</title>
+  <link rel="stylesheet" href="{% static 'AppColegio/csscoment/style.css' %}">
+{% endblock head %}
+{% block colegio %}
+<br><br>
+{% if not user.is_authenticated %}
+<button style="background-color:#FFC600">
+  <a style="color: black;" href="{% url 'Mensaje' %}">Añadir comentario</a>
+  </button>
+  {% endif %}
+{% if user.is_authenticated %}
+{% for groups in request.user.groups.values_list %}
+{% for group in groups %}
+{% if group == 'Administradores' %}
+<button style="background-color:#FFC600">
+<a style="color: black;" href="{% url 'AgregarOpiniones' %}">Añadir comentario</a>
+</button>
+{% endif %}
+
+{% if group == 'Clientes' %}
+<button style="background-color:#FFC600">
+<a style="color: black;" href="{% url 'AgregarOpiniones' %}">Añadir comentario</a>
+</button>
+{% endif %}
+
+{% endfor %}
+{% endfor %}
+  {% endif %}
+<!-- partial:index.partial.html -->
+<div class="cards-list">
+{% for e in resultados %}
+<div class="card" style="background-color: #23A036">
+  <br><br><br><br><br>
+  <br>
+  <div class="card_title title-black">
+    <p style="color: aliceblue;">{{e.autor}}</p>
+  </div>
+  <center>
+  <div>
+  <p style="color: aliceblue;">{{e.opinion}}</p>
+  <p style="color: aliceblue;">{{e.calificacion}}</p>
+</div>
+</center>
+</div>
+&nbsp;&nbsp;
+{% endfor %} 
+                    
+
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+ <script src="{% static 'AppColegio/lib/easing/easing.min.js' %}"></script>
+ <script src="{% static 'AppColegio/lib/waypoints/waypoints.min.js' %}"></script>
+ <script src="{% static 'AppColegio/lib/counterup/counterup.min.js' %}"></script>
+ <script src="{% static 'AppColegio/lib/owlcarousel/owl.carousel.min.js' %}"></script>
+ <script src="{% static 'AppColegio/lib/isotope/isotope.pkgd.min.js' %}"></script>
+ <script src="{% static 'AppColegio/lib/lightbox/js/lightbox.min.js' %}"></script>
+
+ <!-- Contact Javascript File -->
+ <script src="{% static 'AppColegio/mail/jqBootstrapValidation.min.js' %}"></script>
+ <script src="{% static 'AppColegio/mail/contact.js' %}"></script>
+
+ <!-- Template Javascript -->
+ <script src="{% static 'AppColegio/js/main.js' %}"></script>
+{% endblock %}

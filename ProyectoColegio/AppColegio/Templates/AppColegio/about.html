@@ -1,0 +1,259 @@
+{% extends 'AppColegio/padre.html' %}
+{% load static %} 
+{% block head %}
+<title>Acerca de mi</title>
+{% endblock head %}
+{% block colegio %}
+<div>
+  <div class="container-fluid py-5 mb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+            
+                    <img class="img-fluid w-100" src="https://media.licdn.com/dms/image/C4D03AQFj-bgi22PYsQ/profile-displayphoto-shrink_800_800/0/1632270652572?e=1682553600&v=beta&t=-VLWvbG0qbS0Dej7GeoGvB1rWQRpBtzmYrPAypoZgjw" alt="">
+    
+            </div>
+            <div class="col-lg-7 pt-5 pb-lg-5">
+                <h6 class="text-secondary font-weight-semi-bold text-uppercase mb-3">Bachiller en Ingenieria de Sistemas</h6>
+                <h1 class="mb-4 section-title">Rosa Isela Cordova Ramos</h1>
+                <h5 class="text-muted font-weight-normal mb-3">Este proyecto realizado en Coder House en el curso de Python, me ha servido de gran utilidad para sedimentar mis aprendizajes</h5>
+                <p>Ha sido un gran reto culminar este mini proyecto, me ha servido de mucho para entender el codigo de python, posteriormente quiero especializarme en la ciencia de datos, quiero combinar la programacion con la estadistica y la visualizacion para poder generar un gran valor a las organizaciones</p>
+                <div class="d-flex align-items-center pt-4">
+                    <a href="" class="btn btn-primary mr-5">Mi video del proyecto</a>
+                    <button type="button" class="btn-play" data-toggle="modal"
+                        data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
+                        <span></span>
+                    </button>
+                    <h5 class="font-weight-normal text-white m-0 ml-4 d-none d-sm-block">Play Video</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+
+<!-- Video Modal Start -->
+<div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>        
+                <!-- 16:9 aspect ratio -->
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Video Modal End -->
+
+
+<!-- Features Start -->
+
+<!-- Features End -->
+
+
+<!-- Team Start -->
+<div class="container-fluid pt-5">
+    <div class="container py-5">
+        <div class="row align-items-end mb-4">
+            <div class="col-lg-6">
+                <h6 class="text-secondary font-weight-semi-bold text-uppercase mb-3">Mis skill</h6>
+                <h1 class="section-title mb-3">Cursos y esecializaciones culminadas</h1>
+            </div>
+            <div class="col-lg-6">
+                <h4 class="font-weight-normal text-muted mb-3">En este tiempo he adquirido un significativo aprendizaje y estos som</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="owl-carousel team-carousel position-relative">
+                    <div class="team d-flex flex-column text-center rounded overflow-hidden">
+                        <div class="position-relative">
+                            <div class="team-img">
+                                <img class="img-fluid w-100" src="https://dev.java/assets/images/java-logo-vert-blk.png" alt="">
+                            </div>
+                            <div class="team-social d-flex flex-column align-items-center justify-content-center bg-primary">
+                                <a class="btn btn-secondary btn-social mb-2" href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-secondary btn-social mb-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-secondary btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column bg-primary text-center py-4">
+                            <h5 class="font-weight-bold">Full Name</h5>
+                            <p class="text-white m-0">Designation</p>
+                        </div>
+                    </div>
+                    <div class="team d-flex flex-column text-center rounded overflow-hidden">
+                        <div class="position-relative">
+                            <div class="team-img">
+                                <img class="img-fluid w-100" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg/1200px-Microsoft_Office_Excel_%282019%E2%80%93present%29.svg.png" alt="">
+                            </div>
+                            <div class="team-social d-flex flex-column align-items-center justify-content-center bg-primary">
+                                <a class="btn btn-secondary btn-social mb-2" href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-secondary btn-social mb-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-secondary btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column bg-primary text-center py-4">
+                            <h5 class="font-weight-bold">Full Name</h5>
+                            <p class="text-white m-0">Designation</p>
+                        </div>
+                    </div>
+                    <div class="team d-flex flex-column text-center rounded overflow-hidden">
+                        <div class="position-relative">
+                            <div class="team-img">
+                                <img class="img-fluid w-100" src="https://cyclr.com/wp-content/uploads/2022/03/ext-550.png" alt="">
+                            </div>
+                            <div class="team-social d-flex flex-column align-items-center justify-content-center bg-primary">
+                                <a class="btn btn-secondary btn-social mb-2" href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-secondary btn-social mb-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-secondary btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column bg-primary text-center py-4">
+                            <h5 class="font-weight-bold">Full Name</h5>
+                            <p class="text-white m-0">Designation</p>
+                        </div>
+                    </div>
+                    <div class="team d-flex flex-column text-center rounded overflow-hidden">
+                        <div class="position-relative">
+                            <div class="team-img">
+                                <img class="img-fluid w-100" src="https://www.ld.co.cr/wp-content/uploads/2019/12/sap-business-one-icon.png" alt="">
+                            </div>
+                            <div class="team-social d-flex flex-column align-items-center justify-content-center bg-primary">
+                                <a class="btn btn-secondary btn-social mb-2" href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-secondary btn-social mb-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-secondary btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column bg-primary text-center py-4">
+                            <h5 class="font-weight-bold">Full Name</h5>
+                            <p class="text-white m-0">Designation</p>
+                        </div>
+                    </div>
+
+                    <div class="team d-flex flex-column text-center rounded overflow-hidden">
+                        <div class="position-relative">
+                            <div class="team-img">
+                                <img class="img-fluid w-100" src="data:image/png;base64,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" alt="">
+                            </div>
+                            <div class="team-social d-flex flex-column align-items-center justify-content-center bg-primary">
+                                <a class="btn btn-secondary btn-social mb-2" href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-secondary btn-social mb-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-secondary btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column bg-primary text-center py-4">
+                            <h5 class="font-weight-bold">Full Name</h5>
+                            <p class="text-white m-0">Designation</p>
+                        </div>
+                    </div>
+                    <div class="team d-flex flex-column text-center rounded overflow-hidden">
+                        <div class="position-relative">
+                            <div class="team-img">
+                                <img class="img-fluid w-100" src="https://eucariota.eu/wp-content/uploads/2020/01/PowerBI.jpg" alt="">
+                            </div>
+                            <div class="team-social d-flex flex-column align-items-center justify-content-center bg-primary">
+                                <a class="btn btn-secondary btn-social mb-2" href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-secondary btn-social mb-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-secondary btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column bg-primary text-center py-4">
+                            <h5 class="font-weight-bold">Full Name</h5>
+                            <p class="text-white m-0">Designation</p>
+                        </div>
+                    </div>
+                    <div class="team d-flex flex-column text-center rounded overflow-hidden">
+                        <div class="position-relative">
+                            <div class="team-img">
+                                <img class="img-fluid w-100" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png" alt="">
+                            </div>
+                            <div class="team-social d-flex flex-column align-items-center justify-content-center bg-primary">
+                                <a class="btn btn-secondary btn-social mb-2" href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-secondary btn-social mb-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-secondary btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column bg-primary text-center py-4">
+                            <h5 class="font-weight-bold">Full Name</h5>
+                            <p class="text-white m-0">Designation</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Team End -->
+
+
+<!-- Footer Start -->
+<div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
+    <div class="row pt-5">
+        <div class="col-lg-3 col-md-6 mb-5">
+            <a href="{% static 'AppColegio/index.html' %}" class="navbar-brand">
+                <h1 class="m-0 mt-n3 display-4 text-primary">Alba</h1>
+            </a>
+            <p>Un buen servicio con personal de calidad</p>
+            <h5 class="font-weight-semi-bold text-white mb-2">Horas Abiertas</h5>
+            <p class="mb-1">Lun – Sab, 8AM – 5PM</p>
+            <p class="mb-0">Sunday: Cerrados</p>
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        <div class="col-lg-3 col-md-6 mb-5">
+            <h4 class="font-weight-semi-bold text-primary mb-4">Ponerse en Contacto</h4>
+            <p><i class="fa fa-map-marker-alt text-primary mr-2"></i>Calle Los Arandanos #456, Lima</p>
+            <p><i class="fa fa-phone-alt text-primary mr-2"></i>+012 345 67890</p>
+            <p><i class="fa fa-envelope text-primary mr-2"></i>alba@gmail.com</p>
+            <div class="d-flex justify-content-start mt-4">
+                <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="col-lg-3 col-md-6 mb-5">
+            <h4 class="font-weight-semi-bold text-primary mb-4">Enlaces</h4>
+            <div class="d-flex flex-column justify-content-start">
+                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Acerca de mi</a>
+                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Servicios</a>
+                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Nuestro Personal</a>
+                <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contactanos</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-primary px-3 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+ <!-- JavaScript Libraries -->
+ <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+ <script src="{% static 'AppColegio/lib/easing/easing.min.js' %}"></script>
+ <script src="{% static 'AppColegio/lib/waypoints/waypoints.min.js' %}"></script>
+ <script src="{% static 'AppColegio/lib/counterup/counterup.min.js' %}"></script>
+ <script src="{% static 'AppColegio/lib/owlcarousel/owl.carousel.min.js' %}"></script>
+ <script src="{% static 'AppColegio/lib/isotope/isotope.pkgd.min.js' %}"></script>
+ <script src="{% static 'AppColegio/lib/lightbox/js/lightbox.min.js' %}"></script>
+
+ <!-- Contact Javascript File -->
+ <script src="{% static 'AppColegio/mail/jqBootstrapValidation.min.js' %}"></script>
+ <script src="{% static 'AppColegio/mail/contact.js' %}"></script>
+
+ <!-- Template Javascript -->
+ <script src="{% static 'AppColegio/js/main.js' %}"></script>
+ {% endblock %}

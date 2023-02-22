@@ -1,0 +1,32 @@
+{% extends 'AppColegio/padre.html' %}
+
+{% block head %}
+    <title>Añadir Servicios</title>
+{% endblock head %}
+
+{% block body %}
+    <h1>En esta sección puedes añadir estrenos próximos.</h1>
+
+{% endblock body %}
+
+{% block colegio %}
+<br><br>
+<center>
+<h1>Agregar entregables</h1>
+<br>
+<form action="" enctype="multipart/form-data" method="POST">  {% csrf_token %}
+
+    <table>
+
+        {{form.as_table}}
+
+    </table>
+  <br>
+    <input style="background-color: orange;"  type="submit" value="Enviar">
+
+
+</form>
+
+</center>
+
+{% endblock %}
